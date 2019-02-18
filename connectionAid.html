@@ -9,6 +9,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <style type="text/css">
+  	
+  /* Style Navbar */
   	.navbar li a{
   		color:gray;
   	}
@@ -17,7 +19,8 @@
   margin-right:30px;}
 
   .navbar {
-   border-bottom-color: #fff;
+  	background-color: white;
+   
     }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
@@ -28,8 +31,51 @@
 }
 
 
+/* Style the search box */
+#mySearch {
+  margin:100px 0 12px 20px ;
+  width: 53%;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 2px solid gray;
+}
 
+/* Style the navigation menu */
+#myMenu {
+
+  list-style-type: none;
+  padding: 0;
+  margin-left:20px;
+}
+
+/* Style the navigation links */
+#myMenu li a {
+  padding-top:-1000px;
+  color:white;
+  text-shadow:2px 2px gray;
+  font-size:30px;
+  background-color:transparent;
+  text-decoration: none;
+  margin-left: 10px;
+  width: 50%;
+  display: block
+}
+
+#myMenu li img{
+	margin-right: 20px;
+	
+	width:350px;
+	height:250px;
+	border:5px solid #3480E3;
+	border-radius:10px;
+
+}
+
+img:hover{
+	cursor:pointer;
+	transform:scale(1.05);}
 </style>
+
 </head>
 
 <body id="myPage">
@@ -58,8 +104,58 @@
         <span class="icon-bar" style="background-color:#3480E3"></span>
         <span class="icon-bar" style="background-color:#3480E3"></span>
      </div>
-    
+  </nav>
+
+
+<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search" >
+
+<ul id="myMenu">
+  <li style="float:left"><img href="#"src="Images/alcohol.png" style="width:350px;height:250px; border:5px solid #3480E3;"><a href="#">Alcohol</a></li>
   
-</nav>
+  <li ><img src="Images/cigarettes.jpg" style="width:350px;height:250px"><a href="#">Cigarettes</a></li>
+  
+  <li style="float:left"><img href="#" src="Images/marijuana.jpg" style="width:350px;height:250px;border-left:5px solid #3480E3"><a href="#">Marijuana</a></li>
+  
+  <li><img src="Images/cocaine.jpg" style="width:350px;height:250px"><a href="#">Cocaine</a></li>
+  
+  <li style="float:left"><img href="#" src="Images/hashish.jpg" style="width:350px;height:250px;border-left:5px solid #3480E3 "><a href="#">Hasish</a></li>
+  
+  <li><img src="Images/opium.jpg" href="#" style="width:350px;height:250px"><a href="#">Opium</a></li>
+  
+  <li style="float:left"><img src="Images/ectasy.jpg" href="#" style="width:350px;height:250px ;border-left:5px solid #3480E3"><a href="#">Ectasy</a></li>
+  
+  <li><img src="Images/lsd.jpg" href="#" style="width:350px;height:250px"><a href="#">LSD</a></li>
+  
+  <li style="float:left"><img src="Images/mdma.png" href="#" style="width:350px;height:250px;border-left:5px solid #3480E3 "><a href="#">MDMA</a></li>
+  
+  <li><img src="Images/heroine.jpg" href="#" style="width:350px;height:250px "><a href="#">Heroine</a></li>
+  
+  <li style="float:left"><img src="Images/dmt.jpg" href="#" style="width:350px;height:250px;border-left:5px solid #3480E3"><a href="#">DMT</a></li>
+  
+  <li><img src="Images/other.jpg" style="width:350px;height:250px"><a href="#">Other</a></li>
+ 
+
+</ul>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display =" ";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
 </body>
 </html>
