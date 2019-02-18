@@ -1,0 +1,1 @@
+Create a folder and place the .html file ->Create another folder of name "Images" and place the images inside this folder.
