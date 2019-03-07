@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ConnectionAid</title>
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+ <link rel="icon" type="image/png" href="Images/titleLogo.png">
+ 
+ <style type="text/css">
+  	
+ #Logo{
+ margin-left:-5%;
+ margin-top: 10px;
+ width:20%;
+ height:50px;
+} 
+
+.navbar-default{background-color: white;
+}
+.navbar-nav li{color:black;
+  background-color: white;
+  }
+
+  .navbar-nav li:hover{border-bottom:2px solid gray;}
+
+@media screen and (max-width:50px){
+	#Logo{
+		width:40%;
+	}
+}	
+img:hover{
+	cursor:pointer;
+	transform:scale(1.05);
+}
+
+.navbar-nav{margin-top: -50px;}
+
+@media screen and (max-width: 500px)
+{
+	.navbar-nav{margin-top:20px;}
+	#Logo{margin-left:4%;width:40%;}
+   .navbar-toggle{margin-top:4%; } 
+
+
+}
+</style>
+
+</head>
+
+<body id="myPage">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+ <div class="container">
+ <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span> 
+      </button>
+      <a  href="#"><img id="Logo"src="Images/logo.png"></a>
+ </div>
+    
+ <div class="collapse navbar-collapse" id="myNavbar">
+ <ul class="nav navbar-nav navbar-right">
+
+<li><a href="">Home</a></li>
+<li><a href="">Stories</a></li>
+<li><a href="">Education</a></li>
+<li><a href="">Counsellors</a></li>
+<li><a hef="">Rehabilitation Centres </a></li>
+<li><a href="">Offline Help</a></li>
+<li><a href="">Resources</a></li>
+<li><a href="">About Us</a></li>
+<li><a href="">Login</a></li>
+<li style="border-bottom:none"><button id="SignUp"type="button" class="btn btn-info" style="margin-top:8px;margin-left:20px;-webkit-border-radius:30px;background-color: #3480E3;box-shadow: 2px 4px gray;">Sign Up</button></li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+</body>
+</html>
